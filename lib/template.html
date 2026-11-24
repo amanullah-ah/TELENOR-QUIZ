@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--{{HEAD}}-->
+<meta name="theme-color" content="#050505" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)">
+<meta name="application-name" content="Telenor Quiz">
+<meta name="author" content="AMAN ULLAH">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Telenor Quiz">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>window.__DAYS__=/*{{DAYS_JSON}}*/[];</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&family=Syne:wght@700;800&family=Bebas+Neue&family=Playfair+Display:ital,wght@1,500;1,600&family=Gulzar&family=Nova+Square&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__ready)document.documentElement.classList.remove("js")},4000)</script>
+<link rel="stylesheet" href="/aman.css">
+</head>
+<body>
+<!--{{NOSCRIPT}}-->
+<header><div class="wrap"><div class="nav">
+  <div class="logo"><i class="lg"><span>A</span><img src="https://i.postimg.cc/6qyDn9qM/dc09cb5c4b7f0a3c5be1ebd21753541a.jpg" alt="Logo" width="38" height="38" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()"></i><span class="lt"><b>AMAN ULLAH</b><small>Telenor Daily Quiz Answer</small></span></div>
+  <nav><a href="#answers" data-t="nav1">Answers</a><a href="#how" data-t="nav2">How to play</a><a href="#faq" data-t="nav3">FAQ</a></nav>
+  <div class="left"><button class="lgsw" id="lang" aria-label="Language / زبان"><span data-l="en">EN</span><span data-l="ur">اردو</span></button><button class="tbtn th" id="theme" aria-label="Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="sun" stroke="#f59e0b"><circle cx="12" cy="12" r="4.2" fill="#f59e0b" fill-opacity=".25"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.5 1.5M17.2 17.2l1.5 1.5M5.3 18.7l1.5-1.5M17.2 6.8l1.5-1.5"/></g><path class="moon" stroke="#a5b4fc" fill="#a5b4fc" fill-opacity=".22" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button><button class="tbtn" id="menu" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="18" height="18" style="display:block;margin:auto;stroke:currentColor;stroke-width:2;stroke-linecap:round;fill:none"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+</div></div></header>
+
+<main class="wrap">
+  <div class="hero rv">
+    <span class="chip"><span class="dot" id="dot"></span><span id="stat"></span></span>
+    <h1 data-t="h1">Telenor Quiz <em>Today</em></h1>
+    <div class="datebar" id="dt"></div>
+    <p class="sub" data-t="sub">My Telenor app ke daily “Test Your Skills” quiz ke sahi jawab. Check karein, submit karein aur free MBs jeetein.</p>
+    <a class="apkbtn" id="apkbtn" href="/telenor-quiz.apk" download hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg><span data-t="apkbtn">Install APK</span></a>
+  </div>
+
+  <div class="stats rv">
+    <div class="glass stat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.500 9.500a2.500 2.500 0 1 1 3.500 2.300c-.6.300-1 .8-1 1.500M12 17h.01"/></svg><b>5</b><small data-t="s1">Questions</small></div>
+    <div class="glass stat"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-2-4-6-3-5 0 .5 1 3 1 5 0zm0 0c2-4 6-3 5 0-.5 1-3 1-5 0z"/></svg><b id="rw">120MB</b><small data-t="s2">Reward</small></div>
+    <div class="glass stat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>12 AM</b><small data-t="s3">Daily update</small></div>
+  </div>
+
+  <div class="rv">
+    <div class="cdl" data-t="cdl">Agla update mein</div>
+    <div class="cd"><div><b id="ch">00</b><small data-t="hrs">HRS</small></div><div><b id="cm">00</b><small data-t="min">MIN</small></div><div><b id="cs">00</b><small data-t="sec">SEC</small></div></div>
+  </div>
+
+  <div class="mq rv"><div>
+    <span>Free MBs Daily</span><span>★</span><span>Updated 12:00 AM PKT</span><span>★</span><span>5 Questions</span><span>★</span><span>Fast &amp; Accurate</span><span>★</span>
+    <span>Free MBs Daily</span><span>★</span><span>Updated 12:00 AM PKT</span><span>★</span><span>5 Questions</span><span>★</span><span>Fast &amp; Accurate</span><span>★</span>
+  </div></div>
+
+  <section id="answers">
+    <div class="rv"><div class="eyebrow" data-t="e1">Daily answers</div><h2 data-t="h2a">Aaj ke <em>jawab</em></h2></div>
+    <div class="tabs" id="tabs"></div>
+    <div id="list"></div>
+    <div class="actions">
+      <button class="btn" id="copy"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg><span data-t="copy">Copy</span></button>
+      <button class="btn alt" id="share"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.600 13.500l6.800 4M15.400 6.500l-6.800 4"/></svg><span data-t="share">Share</span></button>
+      <button class="btn alt" id="tog"><svg viewBox="0 0 24 24"><path d="M2 12s3.500-7 10-7 10 7 10 7-3.500 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span id="togl">Hide</span></button>
+    </div>
+    <div class="glass short" id="shortbox"><small data-t="short">Short Answer</small><b id="short"></b><span class="hint" data-t="tap">Tap to copy</span></div>
+  </section>
+
+  <section id="how">
+    <div class="rv"><div class="eyebrow" data-t="e2">Guide</div><h2 data-t="h2b">Quiz kaise <em>khelein</em></h2></div>
+    <div class="steps">
+      <div class="glass step rv"><i>01</i><b data-t="st1b">App kholen</b><p data-t="st1p">My Telenor app install karein. Pehli baar login ke liye Telenor SIM chahiye.</p></div>
+      <div class="glass step rv"><i>02</i><b data-t="st2b">Play &amp; Win</b><p data-t="st2p">Neeche right mein Play &amp; Win button par tap karein.</p></div>
+      <div class="glass step rv"><i>03</i><b data-t="st3b">5 sawal</b><p data-t="st3p">Test Your Skills mein har jawab chun kar Next dabayen.</p></div>
+      <div class="glass step rv"><i>04</i><b data-t="st4b">Claim Now</b><p data-t="st4p">Sab sahi hon to Claim Now dabayen. Reward kuch minute mein aa jata hai.</p></div>
+    </div>
+  </section>
+
+  <section id="rules">
+    <div class="rv"><div class="eyebrow" data-t="e3">Important</div><h2 data-t="h2c"><em>Rules</em></h2></div>
+    <div class="glass rv"><ul class="rules">
+      <li data-t="r1">Quiz din mein sirf ek baar khela ja sakta hai.</li>
+      <li data-t="r2">5 sawal ek hi flow mein complete karein, warna reward nahi milta.</li>
+      <li data-t="r3">Quiz raat 12:00 AM (Pakistan time) par reset hota hai.</li>
+      <li data-t="r4">Reward aam taur par 120MB hota hai, kabhi promotion mein zyada.</li>
+    </ul></div>
+  </section>
+
+  <section id="faq">
+    <div class="rv"><div class="eyebrow" data-t="e4">Support</div><h2 data-t="h2d">Aksar poochhe gaye <em>sawal</em></h2></div>
+    <details class="rv"><summary data-t="f1q">Kya jawab 100% sahi hain?</summary><p data-t="f1a">Hum roz app ke sawal dekh kar jawab update karte hain. Kabhi kabhi alag SIM ya region par sawal mukhtalif ho sakte hain.</p></details>
+    <details class="rv"><summary data-t="f2q">Mere app mein sawal alag hain, kya karun?</summary><p data-t="f2a">Sawal copy karke kisi AI tool se poochh lein, ya agle update ka intezar karein.</p></details>
+    <details class="rv"><summary data-t="f3q">Jawab kab update hote hain?</summary><p data-t="f3a">Quiz raat 12:00 AM par badalta hai, aur jawab us ke kuch minute baad yahan aa jate hain.</p></details>
+    <details class="rv"><summary data-t="f4q">Kya Wi-Fi par khel sakte hain?</summary><p data-t="f4a">Haan, pehle login/OTP ke baad Wi-Fi ya mobile data dono chalte hain.</p></details>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <div class="core rv">
+    <div class="gridbg"></div>
+    <i class="cb tl"></i><i class="cb tr"></i><i class="cb bl"></i><i class="cb br"></i>
+    <div class="pill"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span>&gt; ai.core: neural bus online</span></div>
+    <div class="chd"><span>Developer</span><b>CORE CIRCUIT MATRIX</b></div>
+    <div class="stage">
+      <div class="col"><div class="ac" style="--c:#D97757"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg></span><div><b>Claude AI</b><small>Neural Coding</small></div></div><div class="ac" style="--c:#10A37F"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#10A37F" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z"/><path d="M12 7.5l4.2 2.4v4.2L12 16.5l-4.2-2.4V9.9z"/></svg></span><div><b>ChatGPT</b><small>Prompt Engine</small></div></div><div class="ac" style="--c:#A855F7"><span class="ic"><svg viewBox="0 0 24 24"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4285F4"/><stop offset="1" stop-color="#A855F7"/></linearGradient></defs><path fill="url(#gg)" d="M12 2c.6 5.500 4.500 9.400 10 10-5.500.6-9.400 4.500-10 10-.6-5.500-4.500-9.400-10-10 5.500-.6 9.400-4.500 10-10z"/></svg></span><div><b>Gemini AI</b><small>AI API Engine</small></div></div></div>
+      <svg class="bus " viewBox="0 0 56 180" preserveAspectRatio="none" aria-hidden="true"><path d="M0 26H14L42 62H56" stroke="#D97757"/><circle r="2.8" fill="#D97757"><animateMotion dur="3.0s" begin="0.0s" repeatCount="indefinite" path="M0 26H14L42 62H56"/></circle><path d="M0 90H56" stroke="#10A37F"/><circle r="2.8" fill="#10A37F"><animateMotion dur="3.6s" begin="0.5s" repeatCount="indefinite" path="M0 90H56"/></circle><path d="M0 154H14L42 118H56" stroke="#A855F7"/><circle r="2.8" fill="#A855F7"><animateMotion dur="4.2s" begin="1.0s" repeatCount="indefinite" path="M0 154H14L42 118H56"/></circle></svg>
+      <div class="hub"><span class="wv"></span><span class="wv w2"></span><span class="tk"></span><span class="hr"></span><span class="hd"></span><span class="orb"></span><span class="orb o2"></span><img class="hp" id="hp" src="https://ik.imagekit.io/amanphoto/20260620_164003.png?updatedAt=1781955650166" alt="Aman Ullah" referrerpolicy="no-referrer"><span class="mono" id="mono">A</span></div>
+      <svg class="bus r" viewBox="0 0 56 180" preserveAspectRatio="none" aria-hidden="true"><path d="M0 26H14L42 62H56" stroke="#4D6BFE"/><circle r="2.8" fill="#4D6BFE"><animateMotion dur="3.0s" begin="0.0s" repeatCount="indefinite" path="M0 26H14L42 62H56"/></circle><path d="M0 90H56" stroke="#ffffff"/><circle r="2.8" fill="#ffffff"><animateMotion dur="3.6s" begin="0.5s" repeatCount="indefinite" path="M0 90H56"/></circle><path d="M0 154H14L42 118H56" stroke="#20B8CD"/><circle r="2.8" fill="#20B8CD"><animateMotion dur="4.2s" begin="1.0s" repeatCount="indefinite" path="M0 154H14L42 118H56"/></circle></svg>
+      <div class="col"><div class="ac" style="--c:#4D6BFE"><span class="ic"><svg viewBox="0 0 24 24"><path fill="#4D6BFE" fill-rule="evenodd" d="M3 13.5C3 9.9 6.1 7 10 7c3 0 5.3 1.6 6.3 3.8l3.4-2.3-.9 4.2c-.6 3.2-3.4 5.3-6.8 5.3C7.4 18 3 16.200 3 13.500zm11.200-1.500a.9.9 0 1 0 0-1.800.9.9 0 0 0 0 1.800z"/></svg></span><div><b>DeepSeek</b><small>Reasoning AI</small></div></div><div class="ac" style="--c:#ffffff"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.5c-2.5 0-3 1.2-3 3V9c0 1.3-.7 2.5-2 3 1.300.5 2 1.700 2 3v2.500c0 1.800.5 3 3 3M15 3.5c2.500 0 3 1.200 3 3V9c0 1.300.7 2.500 2 3-1.300.5-2 1.700-2 3v2.500c0 1.800-.5 3-3 3"/></svg></span><div><b>Copilot</b><small>Code Pair</small></div></div><div class="ac" style="--c:#20B8CD"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#20B8CD" stroke-width="2.2" stroke-linecap="round"><path d="M12 2.5v19M3.8 7.25l16.4 9.5M20.2 7.25l-16.4 9.5"/></svg></span><div><b>Perplexity</b><small>AI Research</small></div></div></div>
+    </div>
+    <div class="pill"><i class="g"></i><b>AMAN ULLAH // AI CORE</b></div>
+    <div class="cstat"><span><i></i>Core online</span><span><i></i>6 AI nodes</span><span><i></i>Always building</span></div>
+  </div>
+  <div class="fcard"><div class="fbrand"><i>A</i><span class="lt"><b>AMAN ULLAH</b><small>CODE • CREATE • INSPIRE</small></span></div>
+  <div class="fdiv"></div>
+  <nav class="flinks"><a href="#answers" data-t="nav1">Answers</a><a href="#how" data-t="nav2">How to play</a><a href="#faq" data-t="nav3">FAQ</a><a href="#" class="up" aria-label="Back to top" onclick="scrollTo({top:0,behavior:'smooth'});return false"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a></nav>
+  <p class="fdisc" data-t="disc">Ye ek independent website hai aur Telenor Pakistan se affiliated ya endorsed nahi hai. Content sirf maloomat ke liye hai.</p>
+  </div>
+  <div class="fcopy"><div class="fc1"><span class="fa">© <span id="yr"></span> AMAN ULLAH</span><em data-t="tqa">Telenor Question Answer</em></div><div class="fc2" data-t="rights">All rights reserved</div></div>
+</div></footer>
+<div class="ov" id="ov"></div>
+<aside class="dr" id="dr" aria-label="Menu"><div class="dh"><div class="logo"><i class="lg"><span>A</span><img src="https://i.postimg.cc/6qyDn9qM/dc09cb5c4b7f0a3c5be1ebd21753541a.jpg" alt="Logo" width="38" height="38" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()"></i>AMAN ULLAH</div><button class="tbtn" id="dx" aria-label="Close menu">✕</button></div><div id="dl" style="display:contents"></div><div class="dfoot"><div class="stn">AMAN <em>ULLAH</em></div><div class="stl">Developer • Creator</div></div></aside>
+<div class="toast" id="toast"></div>
+
+<div class="apkpop" id="apkpop" role="dialog" aria-live="polite" hidden><i class="apki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg></i><div class="apkt"><b data-t="apkh">Install the Android app</b><small data-t="apkp">Get answers faster with the APK.</small></div><a class="apkgo" href="/telenor-quiz.apk" download data-t="apkbtn">Install APK</a><button id="apkx" aria-label="Close">×</button></div>
+<div class="ibar" id="ibar" hidden><span id="itx" data-t="install">Install this app for quick access</span><button id="ibtn" data-t="installbtn">Install</button><button id="ix" aria-label="Close">×</button></div>
+<script src="/aman.js"></script>
+</body>
+</html>
